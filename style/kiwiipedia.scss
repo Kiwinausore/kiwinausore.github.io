@@ -1,13 +1,13 @@
 $f-head-name: 'Imprint MT Shadow';
-$f-head-path: '../resources/fonts/IMPRISHA.otf';
+$f-head-path: 'fonts/IMPRISHA.otf';
 $f-head-size: 100px;
 
 $f-title-name: 'Kabel LT Std';
-$f-title-path: '../resources/fonts/KabelLTStd-Book.otf';
+$f-title-path: 'fonts/KabelLTStd-Book.otf';
 $f-title-size: 35px;
 
 $f-txt-name: 'Segoe UI';
-$f-txt-path: '../resources/fonts/segoeui.ttf';
+$f-txt-path: 'fonts/segoeui.ttf';
 $f-txt-size: 20px;
 
 $c-green: #4e6e58;
@@ -54,6 +54,11 @@ body {
 h1 {
 	font-family: $f-title-name;
 	font-size: $f-title-size;
+}
+
+img.icon {
+	width: 3em;
+	height: 3em;
 }
 
 header {
@@ -187,6 +192,7 @@ footer {
 			border: 0;
 		}
 	}
+
 	a {
 		color: $c-beige-light;
 		transition: .3s;
@@ -201,19 +207,19 @@ footer {
 div#filters-container {
 	background-color: $c-green-dark;
 	border-radius: 1.5em;
-	
+
 	h1 {
 		color: $c-green-light;
 	}
-	
+
 	button {
 		background-color: transparent;
-		
+
 		&:hover {
 			cursor: pointer;
 		}
 	}
-	
+
 	.active {
 		background-color: $c-green;
 		color: $c-green-light;
@@ -238,7 +244,7 @@ div#gallery-container {
 			height: 100%;
 			width: 100%;
 			position: relative;
-			
+
 			&:hover {
 				opacity: .5;
 			}
