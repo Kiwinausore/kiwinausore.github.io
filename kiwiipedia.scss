@@ -1,0 +1,247 @@
+$f-head-name: 'Imprint MT Shadow';
+$f-head-path: '../resources/fonts/IMPRISHA.otf';
+$f-head-size: 100px;
+
+$f-title-name: 'Kabel LT Std';
+$f-title-path: '../resources/fonts/KabelLTStd-Book.otf';
+$f-title-size: 35px;
+
+$f-txt-name: 'Segoe UI';
+$f-txt-path: '../resources/fonts/segoeui.ttf';
+$f-txt-size: 20px;
+
+$c-green: #4e6e58;
+$c-green-light: #c3dbc5;
+$c-green-dark: #3b5443;
+$c-beige: #352A30;
+$c-beige-light: #f7e1ca;
+$c-beige-dark: #211a1e;
+
+@font-face {
+	font-family: $f-head-name;
+	src: url($f-head-path);
+}
+
+@font-face {
+	font-family: $f-title-name;
+	src: url($f-title-path);
+}
+
+@font-face {
+	font-family: $f-txt-name;
+	src: url($f-txt-path) format('truetype');
+}
+
+*,
+*:before,
+*:after {
+	font-family: $f-txt-name;
+	font-size: $f-txt-size;
+	text-decoration: none;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	list-style: none;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	background-color: $c-beige-light;
+}
+
+h1 {
+	font-family: $f-title-name;
+	font-size: $f-title-size;
+}
+
+header {
+	height: 20%;
+	display: flex;
+	justify-content: center;
+
+	a {
+		display: block;
+		margin: auto auto;
+		font-family: $f-head-name;
+		font-size: $f-head-size;
+		color: $c-green;
+	}
+
+	&#main-header {
+		height: 100%;
+	}
+}
+
+nav#navbar {
+	width: 50%;
+	background-color: $c-green;
+	margin: 0 auto;
+	border-radius: 2em;
+	display: flex;
+	justify-content: center;
+
+	#navbar-collapse,
+	#navbar-title {
+		display: none;
+	}
+
+	ul {
+		display: flex;
+		height: 100%;
+
+		a {
+			img {
+				height: 1.5em;
+				padding: 0;
+				margin: 0;
+			}
+
+			&:hover {
+				border-color: $c-beige-light;
+				background-color: $c-green-dark;
+			}
+		}
+	}
+}
+
+div#container {
+
+	.card {
+		background-color: $c-green;
+		border-radius: 2em;
+		padding: 1em;
+		margin: 3em auto;
+		width: 50%;
+		color: $c-green-light;
+
+		div.card-desc {
+			display: inline-block;
+			background-color: $c-green-dark;
+			border-radius: 1em;
+			padding: 1em;
+		}
+	}
+
+	.card-left {
+		left: 0;
+		margin-left: 15%;
+		margin-right: auto;
+	}
+
+	.card-right {
+		right: 0;
+		margin-right: 15%;
+		margin-left: auto;
+	}
+
+	img {
+		display: inline-block;
+		width: 500px;
+		border-radius: 1em;
+	}
+}
+
+.button {
+	display: inline-block;
+	font-size: $f-title-size;
+	font-family: $f-title-name;
+	padding: .25em 1.5em;
+	border-radius: 2em;
+	color: $c-beige-light;
+	margin: auto .75em;
+	transition: .3s;
+	border: solid $c-green .2em;
+
+	&:hover {
+		border-color: $c-beige-light;
+		background-color: $c-green-dark;
+	}
+
+	li {
+		font-size: $f-title-size;
+		font-family: $f-title-name;
+	}
+}
+
+footer {
+	width: 30%;
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	background-color: $c-green-dark;
+	border-radius: 1.5em 1.5em 0 0;
+	padding: 1em;
+	color: $c-green-light;
+	bottom: 0;
+
+	ul,
+	p {
+		display: inline-block;
+		margin: auto 0.25em;
+		padding: 0 2em;
+		border-right: solid .05em $c-green-light;
+
+		&:last-child {
+			border: 0;
+		}
+	}
+	a {
+		color: $c-beige-light;
+		transition: .3s;
+		border-bottom: solid .15em transparent;
+
+		&:hover {
+			border-bottom-color: $c-beige-light;
+		}
+	}
+}
+
+div#filters-container {
+	background-color: $c-green-dark;
+	border-radius: 1.5em;
+	
+	h1 {
+		color: $c-green-light;
+	}
+	
+	button {
+		background-color: transparent;
+		
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	
+	.active {
+		background-color: $c-green;
+		color: $c-green-light;
+		border-color: $c-green-light;
+		cursor: default !important;
+	}
+}
+
+div#gallery-container {
+	background-color: $c-green;
+
+	button {
+		background-color: transparent;
+		border-radius: 2em;
+
+		div {
+			border-radius: 2em;
+			opacity: 0;
+			background-color: $c-beige;
+			color: $c-beige-light;
+			margin: 0 auto;
+			height: 100%;
+			width: 100%;
+			position: relative;
+			
+			&:hover {
+				opacity: .5;
+			}
+		}
+	}
+}
